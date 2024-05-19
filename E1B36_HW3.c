@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h.
+#include <stdlib.h.>
 int main (void){
 //1.個人圖片 星星 
 	puts(".............................................:::....................................................");
@@ -24,24 +24,27 @@ int main (void){
 	puts("....................................................................................................");
 	system("pause");//暫停程序 
 	system("cls");//清除畫面
-  int a,i,n;
-	printf("請輸入密碼:");
-	scanf("%d",&a);
-	for(i=0;i<3;i++){
-	if(a==2024)
+  	int a,i,n;
+	for(i=0;i<=3;i++)
 	{
-		printf("歡迎光臨\n");	
-		//2.主選單
-		printf("--------------------\n");
-		printf("| a.畫出直角三角形 |\n");
-		printf("| b.顯示乘法表     |\n");
-		printf("| c.結束           |\n");
-		printf("--------------------\n");
-	}
-	else
-	{
-		printf("請重新輸入:");
+		printf("請輸入密碼:");
 		scanf("%d",&a);
-		i+=1;
+		if(a==2024)
+		{	
+			//2.主選單
+			printf("-----[Booking System]-----\n");
+			printf("| a.Available seats      |\n");
+			printf("| b.Arrange for you      |\n");
+			printf("| c.Choose by yourself   |\n");
+			printf("| d.Exit                 |\n");
+ 			printf("--------------------------\n");
+			break;
+		}
+		else
+			printf("請重新輸入\n");
 	}
+	
+	
+		
+	
 }
