@@ -43,8 +43,9 @@ int main (void){
 		else
 			printf("請重新輸入\n");
 	}
-	
-	
-		
-	
+	switch
+	case'a':
+	puts("\123456789");
+	puts("9----*----");
+	puts("8--*------");
 }
