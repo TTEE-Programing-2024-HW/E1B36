@@ -6,11 +6,12 @@
 #idefine COLS 9
 void clearScreen()
 	{
-		system("cls");
-		getch();
+		system("cls");//清除螢幕
+		getch();//按下任意鍵
 	}
 void gisplaymenu()
-	{
+{
+	\\主選單
 		printf("-----[Booking System]-----\n");
 		printf("| a.Available seats      |\n");
 		printf("| b.Arrange for you      |\n");
@@ -18,7 +19,7 @@ void gisplaymenu()
 		printf("| d.Exit                 |\n");
  		printf("--------------------------\n");
 	}
-void generateSeats(char seats[ROWS][COLS])
+void generateSeats(char seats[ROWS][COLS])\\隨機選十個標示已預定
 	for(int i=0;i<ROWS;i++)
 	{
 		for(int j=0;j<COLS;j++)
@@ -236,18 +237,19 @@ char ch;
 			system("cls")
 			chooseSeatsbyuser(seats);
 			break;
-		case 'd':
+		case 'd'://輸入d
 			char confirm;
 			printf("繼續?(Y/N):");
-			scanf("%c",&confirm);
-			if(confirm=='N')
+			scanf("%c",&confirm);//輸入Y或N
+			if(confirm=='N')//如果輸入N
 			{
-				printf("退出中")
+				printf("退出中");//印出退出中
 				return 0;
 			}
-		default:
+		default://其他
 			printf("再試一次");
 			break;
 	return 0;
 	
 }
+//這次的作業很難，大多是查找資料拼拼湊湊，一開始熬無頭緒想說先寫第一題，但應該先把後面的題目布置好才能從一開始的題目開始，很努力的想辦法寫了這次作業，這代表寫程式有待加強，會多利用暑假時間複習。
