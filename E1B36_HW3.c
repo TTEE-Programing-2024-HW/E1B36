@@ -1,5 +1,58 @@
 #include <stdio.h>
 #include <stdlib.h.>
+#include <time.h>
+#include <conio.h>
+#idefine ROWS 9
+#idefine COLS 9
+
+void clearScreen()
+	{
+		system("cls");
+		getch();
+	}
+void gisplaymenu()
+	{
+		printf("-----[Booking System]-----\n");
+		printf("| a.Available seats      |\n");
+		printf("| b.Arrange for you      |\n");
+		printf("| c.Choose by yourself   |\n");
+		printf("| d.Exit                 |\n");
+ 		printf("--------------------------\n");
+	}
+void generateSeats(char seats[ROWS][COLS])
+	srand(time(0));
+	for(int i=0;i<ROWS;i++)
+	{
+		for(int j=0;j<COLS;j++)
+		{
+			seats[i][j]='-';
+		}
+	 } 
+	 for(int s=0;s<10;s++)
+	 {
+	 	int row=rand()%ROWS;
+	 	int col=rand()%COLS;
+	 	if(seats[row][col]=='-')
+			seats[row][col]='*';
+		else
+			k--;
+}
+void displaySeats(char seats[ROWS][COLS])
+{
+	printf("123456789\n");
+	for(int i=ROW-1;i>=0;i--)
+	{
+		printf(%d,i+1);
+	for(int j=0;j<COLS;j++)
+	{
+		printf("%c",seats[i][j]);
+	}
+	printf("\n");
+	}
+	printf("按任意鍵返回")
+	getch();
+}
+
 int main (void){
 //1.個人圖片 星星 
 	puts(".............................................:::....................................................");
@@ -43,9 +96,5 @@ int main (void){
 		else
 			printf("請重新輸入\n");
 	}
-	switch
-	case'a':
-	puts("\123456789");
-	puts("9----*----");
-	puts("8--*------");
+	]
 }
