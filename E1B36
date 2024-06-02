@@ -41,7 +41,7 @@ bool password()
 	 return false;
 }
 void showMenu()
-{
+{//菜單
 	printf("***********[Grade System]************");
 	printf("|     a.Enter student grades        |");
 	printf("|     b.Display student grades      |");
@@ -51,7 +51,7 @@ void showMenu()
 	printf("|************************************");
  } 
 void enterGrades(vector<student>&students)
- {
+ {//輸入資料
  	int n;
  	printf("請輸入學生數量:");
  	while(!(scanf("%d",&n)==1&&n>=5&&n<=10))
@@ -95,7 +95,7 @@ void enterGrades(vector<student>&students)
 	 printf("學生成績登入完成\n");
  }
 void displayGrades(const vector<student>&student)
-{
+{//所有學生成績
 	printf("所有學生成績如下:\n");
 	printf("%-s %-s %-s %-s %-s %-s","姓名","學號","數學","物理","英文","平均");
 	for(const auto&student:students)
@@ -108,7 +108,7 @@ void displayGrades(const vector<student>&student)
 	clearScreen;
 }
  void searchGrades(const vector<student>&student)
- {
+ {//搜索資料庫
  	char name[50];
  	printf("請輸入要搜索的學生姓名:");
  	scanf("%s",&name);
@@ -128,7 +128,7 @@ void displayGrades(const vector<student>&student)
 		 }
 	 }
 	 if(!found)
-	 {
+	 {//如果沒有找到
 	 	printf("未找到該學生資訊");
 	 }
 	 printf("按任意鍵返回菜單");
@@ -137,7 +137,7 @@ void displayGrades(const vector<student>&student)
 	 clearScreen();
  }
  void gradeRanking(vector<student>&student)
- {
+ {//排名
  	sort(student.begin(),student.end(),[](const Studen&a,const Student&b))
  	{
  		return a.average>b.average;
@@ -154,7 +154,7 @@ void displayGrades(const vector<student>&student)
 	 clearScreen();
  }
 bool exitSystem()
- {
+ {//離開畫面
  	char q;
  	printf("確定離開?(Y/N):");
  	scanf("%d",&q);
@@ -183,27 +183,27 @@ bool exitSystem()
 		scanf("%c",&h); 
 		switch(h)
 		{
-			case'a':
+			case'a'://選擇A
 			case'A':
-				claerScreen();
+				claerScreen();//清除畫面
 				enterGrades(students);
 				break;
-			case'b':
+			case'b'://選擇B
 			case'B':
 				clearScreen();
 				dispalyGrades(students);
 				break;
-			case'c':
+			case'c'://選擇C
 			case'C':
 				clearScreen();
 				searchGrades(students);
 				break;
-			case'd':
+			case'd'://選擇D
 			case'D':
 				clearScreen();
 				gradeRanking(students);
 				break;
-			case'e':
+			case'e'://選擇E
 			case'E':
 				clearscreen();
 				if(exitSystem())
@@ -215,3 +215,4 @@ bool exitSystem()
 	 while(ture);
 	 return 0;
  }
+//這次的作業的題目像是在製作一個學校網頁，提供老師輸入學生的成績，然後再做出排名，中間遇到很多困難，代表我對程式碼還不是很熟悉，有待加強。在寫副城市的時候遇到很多困難，上網查了資料才寫出來。
