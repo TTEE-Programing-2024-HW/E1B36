@@ -15,3 +15,27 @@ struct student
 	int english;
 	double average;
 };
+void clearScreen()
+{
+	system("cls");
+}
+bool password()
+{//密碼 
+	char password[]="2024";
+	char a[5];
+	for(int i=0;i<3;i++)
+	{
+		printf("請輸入密碼:");
+		scanf("%s",&a);
+		if(strcmp(a,password)==0)
+		{
+			return true; 
+		}
+		else
+		{
+			printf("密碼錯誤,重試");
+		} 
+	 } 
+	 printf("連續輸入三次錯誤,程序結束");
+	 return false;
+}
