@@ -39,3 +39,13 @@ bool password()
 	 printf("連續輸入三次錯誤,程序結束");
 	 return false;
 }
+void showMenu()
+{
+	printf("***********[Grade System]************");
+	printf("|     a.Enter student grades        |");
+	printf("|     b.Display student grades      |");
+	printf("|     c.Search for student grades   |");
+	printf("|     d.Grade ranking               |");
+	printf("|     e.Exit system                 |");
+	printf("|************************************");
+ } 
