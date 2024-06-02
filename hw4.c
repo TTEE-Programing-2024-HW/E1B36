@@ -173,3 +173,44 @@ void displayGrades(const vector<student>&student)
  	{
  		return 0;
 	 }
+vector<student>students;
+	 char h;
+	 do
+	 {
+	 	showMenu();
+	 	printf("請選擇選項輸入:");
+		scanf("%c",&h); 
+		switch(h)
+		{
+			case'a':
+			case'A':
+				claerScreen();
+				enterGrades(students);
+				break;
+			case'b':
+			case'B':
+				clearScreen();
+				dispalyGrades(students);
+				break;
+			case'c':
+			case'C':
+				clearScreen();
+				searchGrades(students);
+				break;
+			case'd':
+			case'D':
+				clearScreen();
+				gradeRanking(students);
+				break;
+			case'e':
+			case'E':
+				clearscreen();
+				if(exitSystem())
+				return 0;
+			default:
+			printf("無效選項"); 
+		}
+	 }
+	 while(ture);
+	 return 0;
+ }
